@@ -9,19 +9,19 @@ public class Exercise1 {
             System.out.println("Please enter int n,m");
             int n = in.nextInt();
             int m = in.nextInt();
-            int result = (n-1)/(n*n*m + 2) + (m+n)/(m-n) + n*n*n;
+            int result = (int)((n-1)/(Math.pow(n, 2) * m + 2) + (m+n)/(m-n) + Math.pow(n, 3));
             System.out.println(result);
         } else if (variant == 2) {
             System.out.println("Please enter int n,m");
             int n = in.nextInt();
             int m = in.nextInt();
-            float result = (float)(n-1)/(n*n*m + 2) + (float)(m+n)/(m-n) + n*n*n;
+            float result = (float)((n-1)/(Math.pow(n, 2) * m + 2) + (m+n)/(m-n) + Math.pow(n, 3));
             System.out.println(result);
         } else {
             System.out.println("Please enter float n,m");
             float n = in.nextFloat();
             float m = in.nextFloat();
-            float result = (n - 1) / (n * n * m + 2) + (m + n) / (m - n) + n * n * n;
+            float result = (float)((n-1)/(Math.pow(n, 2) * m + 2) + (m+n)/(m-n) + Math.pow(n, 3));
             System.out.println(result);
         }
         in.close();

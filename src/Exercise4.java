@@ -6,13 +6,10 @@ public class Exercise4 {
         System.out.println("Enter text:");
         String text = in.nextLine();
         String[] words = text.split("[ ,.:;-?!]+");
-        String lastWord = words[words.length - 1];
-        char lastLeter = lastWord.charAt(lastWord.length() - 1);
-        System.out.println("The last letter is: " + lastLeter);
-        for (int i=0;i<words.length;i++){
-            String word = words[i];
-            for(int j = 0; j < word.length(); j++) {
-                if(word.charAt(j) != lastLeter) {
+        for (String word : words) {
+            char lastLetter = word.charAt(word.length() - 1);
+            for (int j = 0; j < word.length(); j++) {
+                if (word.charAt(j) != lastLetter || j == word.length() - 1) {
                     System.out.print(word.charAt(j));
                 }
             }
